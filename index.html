@@ -12,6 +12,7 @@
     <title>Geography Hangman!</title>
   </head>
   <body>
+    <audio id="myAudio"><source src="assets/audio/CarmenSandiegoRockapella.mp3" type="audio/mpeg"></audio>
     <div class="container">
       <div class="card col-md-7 mt-1 mx-auto">
         <img class="card-img-top" src="https://retroent.com/wp-content/uploads/2017/04/Carmen-Sandiego-613x307.jpg" alt="Card image">
@@ -21,7 +22,9 @@
             <hr class="my-3">
             <p class="bodyFont">Carmen's gang pulled another caper, and it's up to you to solve the case!  Press any letter key to guess a letter and try to determine where Sandiego is hiding her score.  Be careful though, if you chase down too many leads she might catch on and move to a different city.  Good luck, gumshoe!</p>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" id="hintButton" href="#" role="button">Hint!</a>
+              <button type="button" class="btn btn-primary btn-lg" id="hintButton">Hint!</button>
+              <button type="button" class="btn btn-dark btn-lg float-right" id="pauseSong">Pause</button>
+              <button type="button" class="btn btn-success float-right btn-lg mr-1" id="playSong">Get Hyped!</button>
             </p>
 
             <div>

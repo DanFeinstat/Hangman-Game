@@ -5,6 +5,7 @@ let lettersUsed = [];
 let guessLeft = 13;
 let winCounter = 0;
 let remainingLetters = 1;
+let themeSong = document.getElementById("myAudio");
 
 //Chooses the Location at random
 function getLocation(){
@@ -101,4 +102,12 @@ document.getElementById("hintButton").onclick = function(event){
   }
 }
 
-//["auckland", "salvador", "stuttgart", "johannesburg", "philadelphia"]
+//play theme song
+document.getElementById("playSong").onclick = function(event){
+  themeSong.play();
+}
+
+//pause theme song
+document.getElementById("pauseSong").onclick = function(event){
+  themeSong.pause();
+}
