@@ -3,35 +3,44 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript"></script>
     <title>Geography Hangman!</title>
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-4">Where in the World is Carmen Sandiego?</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
-        <div>
-          <p>Location: <span id="word"></span></p>
+      <div class="card col-md-7 mt-1 mx-auto">
+        <img class="card-img-top" src="https://retroent.com/wp-content/uploads/2017/04/Carmen-Sandiego-613x307.jpg" alt="Card image">
+        <div class="card-img-body">
+            <p class="introText mt-2">Carmen Sandiego, the criminal mastermind of the Villains International League of Evil (V.I.L.E) is the most notorious thief the world has ever know.</p>
+            <p class="introText">It is your mission as newly minted ACME Slueths to find out where Sandiego is now and return her ill-gotten gains to the proper owners.</p>
+            <hr class="my-3">
+            <p class="bodyFont">Carmen's gang pulled another caper, and it's up to you to solve the case!  Press any letter key to guess a letter and try to determine where Sandiego is hiding her score.  Be careful though, if you chase down too many leads she might catch on and move to a different city.  Good luck, gumshoe!</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" id="hintButton" href="#" role="button">Hint!</a>
+            </p>
+
+            <div>
+              <p class="bodyFont">Location: <span id="word"></span></p>
+            </div>
+
+            <div>
+              <p class="bodyFont">Letters Tried: <span id="letters-used"></span></p>
+            </div>
+
+            <div>
+              <p class="bodyFont">Chances Left: <span id="chances-left"></span></p>
+            </div>
+
+            <div>
+              <p class="bodyFont">Wins: <span id="wins">0</span></p>
+
         </div>
-        <div>
-          <p>Letters Tried: <span id="letters-used"></span></p>
-        </div>
-        <div>
-          <p>Chances Left: <span id="chances-left"></span></p>
-        </div>
-        <div>
-          <p>Wins: <span id="wins">0</span></p>
-        </div>
+      </div>
       </div>
 
     </div>

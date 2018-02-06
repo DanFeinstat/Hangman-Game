@@ -1,4 +1,4 @@
-let locationNames = ["aukland", "salvador", "stuttgart", "johannesburg", "philadelphia"]
+let locationNames = ["auckland", "salvador", "stuttgart", "johannesburg", "philadelphia"]
 let word;
 let answerArray = [];
 let lettersUsed = [];
@@ -66,14 +66,14 @@ document.onkeyup = function(event) {
     if (remainingLetters <= 0){
       winCounter++;
       document.getElementById("wins").innerHTML = winCounter.toString();
-      alert("You found her! She was in " + word +"!");
+      alert("You found her! She stashed the goods in " + word +". Good work, gumshoe!");
       answerArray = [];
       lettersUsed = [];
       guessLeft = 13;
       getLocation();
       generatePuzzle(word);
     };
-    
+
     //loss condition
     if (guessLeft <= 0){
       alert("Oh no, she already moved on to a new city!  Lets try again...");
@@ -85,11 +85,20 @@ document.onkeyup = function(event) {
     }
   }
 }
-if (remainingLetters <= 0){
-  //you win!
-  //reset the game
+
+//hints
+document.getElementById("hintButton").onclick = function(event){
+  if(word === "auckland"){
+    alert("One of your informants caught sight of Sandiego's gang boarding a ship bond for New Zealand!");
+  } else if(word ==="stuttgart"){
+    alert("An NSA wiretap heard Sandiego saying she couldn't wait to visit Mercedes-Benz headquarters and Wilhelma botanical gardens before selling off her loot in the same city...");
+  } else if(word === "johannesburg"){
+    alert("One of Sandiego's gang boasted on facebook that he was staying in Nelson Mandela's former residence!  He had over 2000 likes!");
+  } else if(word === "philadelphia"){
+    alert("Sandiego updated her instagram with a selfy of her and the \"Rocky\" statue.  Next up, the liberty Bell!");
+  } else if(word === "salvador"){
+    alert("Sandiego tweeted \"Working on my tan! #beach#southAmerica#beautiful#lifeisgood\"");
+  }
 }
-if (guessLeft <= 0){
-  //She got away for now! Try again!
-  //reset the game
-}
+
+//["auckland", "salvador", "stuttgart", "johannesburg", "philadelphia"]
