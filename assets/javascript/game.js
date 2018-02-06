@@ -2,7 +2,7 @@ let locationNames = ["aukland", "salvador", "stuttgart", "johannesburg", "philad
 let word;
 let answerArray = [];
 let lettersUsed = [];
-let guessLeft = 15;
+let guessLeft = 13;
 let winCounter = 0;
 let remainingLetters = 1;
 
@@ -69,10 +69,20 @@ document.onkeyup = function(event) {
       alert("You found her! She was in " + word +"!");
       answerArray = [];
       lettersUsed = [];
-      guessLeft = 15;
+      guessLeft = 13;
       getLocation();
       generatePuzzle(word);
     };
+    
+    //loss condition
+    if (guessLeft <= 0){
+      alert("Oh no, she already moved on to a new city!  Lets try again...");
+      answerArray = [];
+      lettersUsed = [];
+      guessLeft = 13;
+      getLocation();
+      generatePuzzle(word);
+    }
   }
 }
 if (remainingLetters <= 0){
